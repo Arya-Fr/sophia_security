@@ -89,7 +89,7 @@ header h1{
 
 
 .Page-Obfuscration {
-  margin-top: 250px;
+  margin-top: 195px;
 }
 
 .toggle {
@@ -98,7 +98,7 @@ header h1{
 
 
 
-button.IP {
+a.IP {
   
   padding: 13px 20px;
   color: white;
@@ -108,6 +108,7 @@ button.IP {
   outline: none;
   border-radius: 5px;
   background-color: #f54266;
+  text-decoration: none;
 }
 
 .Page-IP {

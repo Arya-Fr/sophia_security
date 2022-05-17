@@ -1,6 +1,7 @@
 var log = document.getElementById("log");
 var reg = document.getElementById("reg");
 var pop = document.getElementById("pop");
+var test = document.getElementById("test");
 var toggle = document.querySelector('.toggle');
 var body = document.querySelector('body');
 
@@ -25,5 +26,7 @@ pop.addEventListener("click", function(){
 toggle.addEventListener('click' , function(){
     body.classList.toggle('open');
 })
+
+
 
 
