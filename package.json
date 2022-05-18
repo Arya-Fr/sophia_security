@@ -1,0 +1,23 @@
+{
+  "name": "sophia_security",
+  "version": "1.0.0",
+  "description": "Forum autour de la cybersécurité",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arya-Fr/sophia_security.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arya-Fr/sophia_security/issues"
+  },
+  "homepage": "https://github.com/Arya-Fr/sophia_security#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "firebase": "^9.8.1"
+  }
+}
