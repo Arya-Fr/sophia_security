@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjetDev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" src="./css/style.css"/>
+</head>
+<body>
+  <section class="page">
+    <!-- Barre de navigation -->
+    <nav>
+      <div class="toggle">
+        <i class="fas fa-bars ouvrir"></i>
+        <i class="fas fa-times fermer"></i>
+      </div>
+      <div class="onglets">
+        <a href="#">Accueil</a>
+        <a href="#IP">Mon IP</a>
+        <a href="#OB">Obfuscation</a>
+        <a>Forum</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="buttons">
+        <button class="login" id="butlog">J'ai déjà un compte</button>
+        <button class="register" id="butreg">S'enregistrer</button>
+
+      </div>
+    
+    </nav>
+    <!-- Fin de la barre de navigation -->
+
+    <!-- Header -->
+    <header>
+      <h1>La Cyber a toujours été, notre passion.</h1>
+    </header>
+    <!-- Fin du header -->
+    
+    <!-- Informations -->
+    <a href="#IP">
+        <svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27 0C12.0886 0 0 12.0886 0 27C0 41.9114 12.0886 54 27 54C41.9114 54 54 41.9114 54 27C54 12.0886 41.9114 0 27 0ZM27 49.5C14.5739 49.5 4.50004 39.4261 4.50004 27C4.50004 14.5739 14.5739 4.50004 27 4.50004C39.4261 4.50004 49.5 14.5739 49.5 27C49.5 39.4261 39.4261 49.5 27 49.5Z" fill="#E5F9FF"/>
+          <path d="M36.659 20.909L27 30.568L17.341 20.909C16.4623 20.0303 15.0376 20.0303 14.159 20.909C13.2803 21.7876 13.2803 23.2123 14.159 24.091L25.409 35.341C26.2877 36.2197 27.7123 36.2197 28.591 35.341L39.841 24.091C40.7197 23.2123 40.7197 21.7876 39.841 20.909C38.9623 20.0303 37.5377 20.0303 36.659 20.909Z" fill="#E5F9FF"/>
+        </svg>        
+      </a>
+    <!-- Fin des informations -->
+  </section>
+ 
+  <!-- Ip Adress -->
+  <section id="IP" class="IP-Adress">
+  <div class="Page-IP">
+      <a href= '/ip-adress'; class="IP" id="btn">Appuyer ici pour connaitre votre IP</a>
+      <div class="Rappel-Ip">
+          <p>Voici un petit rappel de ce que c'est qu'une Ip dans le cas ou vous aurriez oublie !</p>
+          <p>L'adresse IP (Internet Protocol) désigne un numéro unique attribué de manière provisoire<br> ou durable à un ordinateur connecté à un réseau informatique <br>qui utilise l'internet protocole.</p>
+
+
+      </div>
+
+
+  </div>
+ 
+</section>
+  
+  <!-- Fin de l'Ip-Adress -->
+  <!-- Obfuscration -->
+  <section id="OB" class="Obfuscration">
+          
+    </a>
+    <div class="Page-Obfuscration">
+      <p class="insertion">C'est le moment d'obfusquer ton code ! </p>
+        <input type="file" name="" id="file" hidden></input>
+        <label for="file" id="selector">Choisissez un fichier</label>
+        <p>Voici votre nouveau code : </p>
+        <div class="Rappel-Obfuscration">
+            <p>Voici un petit rappel de ce que c'est que l'Obfuscration dans le cas ou vous aurriez oublie !</p>
+            <p>L'obfuscation consiste à protéger sa vie privée sur internet.<br> Les méthodes utilisées sont, la plupart du temps, la mise en ligne de fausses informations pour brouiller les pistes<br> ou la suppression de données trop personnelles.</p>
+
+        </div>  
+    </div>
+    </section>
+  <!-- Fin de l'Obfuscration -->
+
+  <!-- Pop up login  -->
+    <div class="center" id="log">
+      <h1>Login</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" placeholder="Username" required>
+          <span></span>
+        </div>
+        <div class="txt_field">
+          <input type="password" placeholder="Password" required>
+          <span></span>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+          Not a member? <a href="#">Signup</a>
+        </div>
+      </form>
+    </div>
+  <!-- Fin  Pop up login  -->
+
+  <!-- Pop up sign in -->
+  <div class="center" id="reg">
+    <h1>SignIn</h1>
+    <form method="post">
+      <div class="txt_field">
+        <input type="text" placeholder="name" required>
+        <span></span>  
+      </div>
+      <div class="txt_field">
+        <input type="email" placeholder="Email" required>
+        <span></span>
+      </div>
+      <div class="txt_field">
+        <input type="password" placeholder="Password" required>
+        <span></span>
+      </div>
+      <div class="pass">Forgot Password?</div>
+      <input type="submit" value="Login">
+      <div class="signup_link">
+        Not a member? <a href="#">Signup</a>
+      </div>
+    </form>
+  </div>
+  <!-- Fin Pop up sign in -->
+
+  <div class="popf" id="pop"></div>
+   <script src="./javascript/javascript.js"></script>
+
+  <!-- Pied de page -->
+  <footer id="contact">
+      <h5>Contact :</h5>
+      <div class="colonnes">
+          <div class="colonne">
+              <p class="foot-para">Bonjour et bienvenue sur notre Site !<br>
+                  Ce site a été créer dans le but d'aider les apprentis en cybersécurité <br> à développer leur connaissance , 
+                  ainsi que de les aider à obtenir de meilleurs résultats <br> sur leur challenges grâce aux outils proposé sur notre site.
+              </p>
+          </div>
+        <div class="colonne">
+          <p>FAQ</p>
+          <p>Forum</p>
+          <p>Nous contacter</p>
+        </div>
+        <div class="colonne">
+          <p>Compte</p>
+          <p>S'enregistrer</p>
+          <p>Se connecter</p>
+        </div>
+      </div>
+      <p>Rayan & Marius</p>
+    </footer>
+  <!-- Fin du pied de page -->
+</body>
+</html>
