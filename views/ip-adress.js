@@ -39,6 +39,4 @@ const getIpAdress = request => {
     return null;
 };
 
-module.exports = {
-    getIpAdress
-};
+export {getIpAdress}

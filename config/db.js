@@ -1,6 +1,7 @@
 //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
 //import { getFirestore, doc, addDoc, setDoc, getDocs, updateDoc, increment, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import { getFirestore, doc, addDoc, setDoc, getDocs, updateDoc, increment, collection, onSnapshot } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -15,19 +16,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const fauth = getAuth(app);
 
-try {
-    const docRef = await addDoc(collection(db, "User"), {
-      first: "Ada",
-      last: "Lovelace",
-      born: 1815
-    });
-    console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
-
-
-const docu = doc(db, "User");
-console.log(docu);
+export {fauth}

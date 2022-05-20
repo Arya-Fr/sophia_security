@@ -1,11 +1,11 @@
-var express = require("express");
-var router = express.Router();
+import { Router } from "express";
+var router = Router();
 
-const {getIpAdress} = require('../views/ip-adress');
+import { getIpAdress } from '../views/ip-adress.js';
 
 router.get('/' , async (req , res) => {
     const ip = await getIpAdress(req);
     res.send(`Voici votre Ip: ${ip}`);
 })
 
-module.exports = router;
+export default router;

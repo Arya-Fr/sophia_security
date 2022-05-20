@@ -1,11 +1,8 @@
-var express = require("express");
-var router = express.Router();
-
-const genererPageAccueil = require('../views/index-get')
+import { Router } from "express";
+var router = Router();
 
 router.get('/', async (req, res) => {
-    const indexHtml = await genererPageAccueil()
-    res.send(indexHtml)
+    res.render("../views/index.ejs", {data: 'This is the data'});
 })
 
-module.exports = router;
+export default router;
