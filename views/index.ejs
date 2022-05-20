@@ -29,11 +29,11 @@
       </div>
 
       <div class="buttons">
-        <% if(true){ %>
+        <% if(account){ %>
+          <button class="register" id="butpro">Profil</button>
+        <% } else{ %>
           <button class="login" id="butlog">J'ai déjà un compte</button>
           <button class="register" id="butreg">S'enregistrer</button>
-        <% } else{ %>
-          <button class="register" id="butpro">Profil</button>
         <% } %>
       </div>
 
@@ -104,7 +104,7 @@
     <h1>Login</h1>
     <form action="/login" method="post">
       <div class="txt_field">
-        <input type="text" placeholder="Username" required name="user">
+        <input type="email" placeholder="Email" required name="mail">
         <span></span>
       </div>
       <div class="txt_field">
@@ -112,6 +112,11 @@
         <span></span>
       </div>
       <input type="submit" value="Login">
+      <% if(type == 2) { %>
+        <div style="color:red">
+          <%= error %>
+        </div>  
+        <% } %>
       <div class="signup_link">
         Not a member? <a href="#">Signup</a>
       </div>
@@ -122,23 +127,28 @@
   <!-- Pop up sign in -->
   <div class="center" id="reg">
     <h1>SignIn</h1>
-    <form method="post">
+    <form action="/register" method="post">
       <div class="txt_field">
-        <input type="text" placeholder="name" required>
+        <input type="text" placeholder="Name" required name="name">
         <span></span>
       </div>
       <div class="txt_field">
-        <input type="email" placeholder="Email" required>
+        <input type="email" placeholder="Email" required name="mail">
         <span></span>
       </div>
       <div class="txt_field">
-        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Password" required name="password" minlength="8">
         <span></span>
       </div>
  
-      <input type="submit" value="Login">
+      <input type="submit" value="Signin">
+      <% if(type == 1) { %>
+      <div style="color:red">
+        <%= error %>
+      </div>  
+      <% } %>
       <div class="signup_link">
-        Not a member? <a href="#">Signup</a>
+        Already member? <a href="#">Signin</a>
       </div>
     </form>
   </div>

@@ -2,7 +2,11 @@ import { Router } from "express";
 var router = Router();
 
 router.get('/', async (req, res) => {
-    res.render("../views/index.ejs", {data: 'This is the data'});
+    res.render("../views/index.ejs", {error: req.session.errorMessage,account: req.session.log,type: req.session.errorType});
+    req.session.errorMessage = null;
+    req.session.errorType = null;
+    req.session.errorCode = null;
+    req.session.save();
 })
 
 export default router;
