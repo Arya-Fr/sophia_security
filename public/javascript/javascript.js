@@ -5,6 +5,7 @@ var test = document.getElementById("test");
 var toggle = document.querySelector('.toggle');
 var body = document.querySelector('body');
 
+
 document.getElementById("butlog").addEventListener( "click" ,function(){
     pop.style.display = "block";
     log.style.display = "block";
@@ -26,6 +27,15 @@ pop.addEventListener("click", function(){
 toggle.addEventListener('click' , function(){
     body.classList.toggle('open');
 })
+
+
+
+function toggleMenu(){
+    var menuToggle = document.querySelector('.toggle');
+    var menu = document.querySelector('.onglets');
+    menuToggle.classList.toggle('active');
+    menu.classList.toggle('active');
+}
 
 
 

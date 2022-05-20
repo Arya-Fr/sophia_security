@@ -16,16 +16,16 @@
   <section class="page">
     <!-- Barre de navigation -->
     <nav>
-      <div class="toggle">
+      <div class="toggle" onclick="toggleMenu();">
         <i class="fas fa-bars ouvrir"></i>
         <i class="fas fa-times fermer"></i>
       </div>
       <div class="onglets">
-        <a href="#">Accueil</a>
-        <a href="#IP">Mon IP</a>
-        <a href="#OB">Obfuscation</a>
+        <a href="#" onclick="toggleMenu();">Accueil</a>
+        <a href="#IP" onclick="toggleMenu();">Mon IP</a>
+        <a href="#OB" onclick="toggleMenu();">Obfuscation</a>
         <a>Forum</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact" onclick="toggleMenu();">Contact</a>
       </div>
 
       <div class="buttons">
@@ -84,8 +84,9 @@
     </a>
     <div class="Page-Obfuscration">
       <p class="insertion">C'est le moment d'obfusquer ton code ! </p>
-      <input type="file" name="" id="file" hidden></input>
-      <label for="file" id="selector">Choisissez un fichier</label>
+      <label class="custom-field">
+        <input type="" placeholder="Entre ton code"/>
+      </label>
       <p>Voici votre nouveau code : </p>
       <div class="Rappel-Obfuscration">
         <p>Voici un petit rappel de ce que c'est que l'Obfuscration dans le cas ou vous aurriez oublie !</p>
@@ -110,7 +111,6 @@
         <input type="password" placeholder="Password" required name="password">
         <span></span>
       </div>
-      <div class="pass">Forgot Password?</div>
       <input type="submit" value="Login">
       <div class="signup_link">
         Not a member? <a href="#">Signup</a>
@@ -135,7 +135,7 @@
         <input type="password" placeholder="Password" required>
         <span></span>
       </div>
-      <div class="pass">Forgot Password?</div>
+ 
       <input type="submit" value="Login">
       <div class="signup_link">
         Not a member? <a href="#">Signup</a>
@@ -165,8 +165,6 @@
       </div>
       <div class="colonne">
         <p>Compte</p>
-        <p>S'enregistrer</p>
-        <p>Se connecter</p>
       </div>
     </div>
     <p>Rayan & Marius</p>
