@@ -12,8 +12,16 @@
     <div>Post by <%= post.name %></div>
     <div>Score <%= post.score %></div>
 
+    <% for(var i=0; i<response.length; i++){ %>
+        <h2><%= response[i].contenu %></h2>
+        <div><%= response[i].name %></div>
+        <div><%= response[i].score %></div>
+    <% } %>
     <% if(account){ %>
-        
+        <form method="post">
+            <input type="text" placeholder="Contenu" required name="contenu">
+            <button type="submit">Répondre</button>
+        </form>
     <% } %>
 </body>
 </html>

@@ -11,6 +11,9 @@ router.get('/' , async (req , res) => {
             cont = [doc.data(), doc.id];
             post.push(cont)
         });
+        post.sort(function (a,b){
+            return b[0].score - a[0].score;
+        })
         res.render("../views/forum.ejs",{posts: post});
     }); 
 })

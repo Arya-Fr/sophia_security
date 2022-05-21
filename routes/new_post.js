@@ -1,7 +1,7 @@
 import { db } from '../config/db.js';
 import { Router } from "express";
 import auth from "../middleware/auth.js";
-import {  addDoc,collection } from "firebase/firestore";
+import { addDoc,collection } from "firebase/firestore";
 
 var router = Router();
 
