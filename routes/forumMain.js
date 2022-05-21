@@ -1,13 +1,18 @@
+import { db } from '../config/db.js';
 import { Router } from "express";
 var router = Router();
+import { collection, getDocs } from "firebase/firestore";
 
 router.get('/' , async (req , res) => {
-    var articles = [
-        {title: "Man Discovers Different Opinion", author: "Reginald", date: "9/2/45"},
-        {title: "Tigers Aren't Great Pets", author: "Simon", date: "4/13/95"},
-        {title: "Eating Cake for Breakfast", author: "Katie", date: "8/20/13"}
-    ];
-    res.render("../views/forum.ejs",{posts: articles});
+    getDocs(collection(db, "post")).then(function(docs){
+        const post = [];
+        docs.forEach((doc) => {
+            var cont;
+            cont = [doc.data(), doc.id];
+            post.push(cont)
+        });
+        res.render("../views/forum.ejs",{posts: post});
+    }); 
 })
 
 export default router;

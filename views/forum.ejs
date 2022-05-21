@@ -17,9 +17,9 @@
     liste post
     <% for(var i=0; i<posts.length; i++){ %>
     <div>
-        <h1><%= posts[i].title %></h1>
-        <h3><%= posts[i].author %></h3>
-        <h4><%= posts[i].date %></h4>
+        <h1><a href="/post/<%= posts[i][1] %>"><%= posts[i][0].title %></a></h1>
+        <h3><%= posts[i][0].name %></h3>
+        <h4><%= posts[i][0].date %></h4>
     </div>
     <% } %>
 </body>

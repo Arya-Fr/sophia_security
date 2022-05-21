@@ -17,7 +17,7 @@ router.post('/', async(req, res) => {
         name: req.session.name,
         owner: req.session.uid,
       });
-      res.redirect("/");
+      res.redirect("/forum");
 })
 
 export default router;

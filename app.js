@@ -33,7 +33,7 @@ app.use("/register", register);
 app.use("/logout", logout);
 app.use("/profil", profil);
 app.use("/new_post", new_post);
-app.use("/post/:id",post);
+app.use("/post/",post);
 
 const PORT = 3000;
 
