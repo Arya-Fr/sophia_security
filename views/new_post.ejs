@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New post</title>
+	<title>New Post</title>
+	<link rel="stylesheet" type="text/css" href="/css/newpost.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 </head>
 <body>
-    <form method="post">
-        <input type="text" placeholder="Title" required name="title">
-        <input type="text" placeholder="Contenu" required name="contenu">
-        <button type="submit">Submit</button>
-    </form>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+            <form method="post">
+			<div class="right">
+				<h2>New Post</h2>
+				<input type="text" class="field" placeholder="Titre" required name="title">
+				<input type="text" class="field" placeholder="Contenu" required name="contenu">
+				<button type="submit" class="btn">Submit</button>
+                
+			</div>
+        </form>
+		</div>
+	</div>
 </body>
 </html>

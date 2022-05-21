@@ -4,13 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/forum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
     <title>Post</title>
 </head>
 <body>
-    <h1><%= post.title %></h1>
-    <h2><%= post.contenu %></h2>
-    <div>Post by <%= post.name %></div>
-    <div>Score <%= post.score %></div>
+<div class="container">
+    <div class="subforum">
+        <div class="subforum-title">
+            <h1>Information du Post</h1>
+        </div>
+        <div class="subforum-row">
+            <div class="subforum-icon subforum-column center">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+            </div>
+            <div class="subforum-description subforum-column">
+                <h1>Titre : <%= post.title %></h1>
+                <h2>Contenu : <%= post.contenu %></h2>
+                <div>Poste par : <%= post.name %></div>
+                <div>Score donnee par la comunautee : <%= post.score %></div>
+
+
+                <% if(account){ %>
+        
+                <% } %>
+            </div>
+          
+        </div>
+    </div>
+        
 
     <% for(var i=0; i<response.length; i++){ %>
         <h2><%= response[i].contenu %></h2>
@@ -23,5 +47,7 @@
             <button type="submit">Répondre</button>
         </form>
     <% } %>
+
 </body>
+           
 </html>
