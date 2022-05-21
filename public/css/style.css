@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 *{
   scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body{
   background-color: #141414;
   padding: 0;

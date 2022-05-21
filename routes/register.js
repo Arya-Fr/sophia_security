@@ -18,11 +18,12 @@ router.post('/', async (req, res) => {
         session.usermail=userCredential.user.email;
         session.token=userCredential.user.accessToken;
         req.session.log = true;
+        req.session.name = user_name;
+        req.session.uid = userCredential.user.uid;
         req.session.save();
         setDoc(doc(db, "User", userCredential.user.uid), {
             name: user_name,
           });
-
         res.redirect("/");
       })
       .catch((error) => {

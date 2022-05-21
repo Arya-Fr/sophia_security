@@ -1,14 +1,9 @@
-import { verify } from 'jsonwebtoken';
-
 export default (req, res, next) => {
   try {
-    const token = req.headers.authorization.split(' ')[1];
-    const decodedToken = verify(token, 'RANDOM_TOKEN_SECRET');
-    const userId = decodedToken.userId;
-    if (req.body.userId && req.body.userId !== userId) {
-      throw 'Invalid user ID';
-    } else {
+    if (req.session.log == true && req.session.token != null) {
       next();
+    } else {
+      throw 'Needed to be log';
     }
   } catch {
     res.status(401).json({
