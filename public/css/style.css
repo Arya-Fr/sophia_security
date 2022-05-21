@@ -57,7 +57,16 @@ nav .buttons .login{
   color: #8f8f8f;
 }
 nav .buttons .register{
+
+  padding: 13px 20px;
+  color: white;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
   background-color: #f54266;
+  text-decoration: none;
 }
 /* Fin de la barre de navigation
 

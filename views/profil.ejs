@@ -4,12 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
     <title>Profil</title>
 </head>
 <body>
-    profil
+    <div class="container">
+        <div class="leftbox">
+            <nav>
+                <a onclick="tabs(0)" class="tab active">
+                <i class="fa fa-user"></i>
+                </a>
+                <a onclick="tabs(1)" class="tab">
+                    <i class="fa fa-user"></i>
+                    </a>
+            </nav>
+        </div>
+        <div class="rightbox">
+            <div class="profile tabShow">
+                    <h1>Info Personnel</h1>
+                    <h2>Name :</h2>
+                    <input type="text" class="input" value="Nom de l'utilisateur">
+                    <h2>Email :</h2>
+                    <input type="email" class="input" value="Mail de l'utilisateur">
+                    <h2>Mot de passe :</h2>
+                    <input type="password" class="input" value="Mot de passe de l'utilisateur">
+                            
+                    <!-- <button class="btn"> Update</button> -->
+                    <a class="deco" href="/logout">Déconnection</a>
+            </div>
+            <div class="Update tabShow">
+                <h1>Modification de votre profil</h1>
+                <h2>Name :</h2>
+                <input type="text" class="input" value="Nouveau nom">
+                <h2>Email :</h2>
+                <input type="email" class="input" value="Nouveau mail">
+                <h2>Mot de passe :</h2>
+                <input type="password" class="input" value="Nouveau Mot de passe">
+                    
+                <button class="btn"> Update</button>
+                <a class="deco" href="/logout">Déconnection</a>
 
+        </div>
+        </div>
+    </div>
+    <script>
+        const tabBtn = 
+        document.querySelectorAll(".tab");
+        const tab = document.querySelectorAll(".tabShow");
 
-    <a href="/logout">Déconnection</a>
+        function tabs(panelIndex) {
+            tab.forEach(function(node){
+                node.style.display = "none";
+            });
+            tab[panelIndex].style.display = "block"
+        }
+        tabs(0);
+    </script>
+    <script>
+        $(".tab").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        })
+    </script>
+
 </body>
 </html>
+
+
+
+
