@@ -19,9 +19,11 @@ import ipadress from "./routes/ipadress.js";
 import login from "./routes/login.js";
 import register from "./routes/register.js";
 import logout from "./routes/logout.js";
-import profil from "./routes/profil.js";
+import update from "./routes/update.js";
 import new_post from "./routes/new_post.js";
 import post from "./routes/post.js";
+import add from "./routes/add.js";
+import addr from "./routes/addr.js";
 
 app.use(express.static('./public'));
 
@@ -31,9 +33,11 @@ app.use('/ip', ipadress);
 app.use("/login", login);
 app.use("/register", register);
 app.use("/logout", logout);
-app.use("/profil", profil);
+app.use("/update", update);
 app.use("/new_post", new_post);
 app.use("/post/",post);
+app.use("/add/",add);
+app.use("/addr/",addr);
 
 const PORT = 3000;
 
