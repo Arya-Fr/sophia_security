@@ -2,14 +2,13 @@ const IP_HEADERS = [
     'Forwarded',
     'Forwarded-For',
     'X-Forwarded',
-    'X-Forwarded-For',     // may contain multiple IP addresses in the format: 'client IP, proxy 1 IP, proxy 2 IP' - we use first one
     'X-Client-IP',
-    'X-Real-IP',           // Nginx proxy, FastCGI
-    'X-Cluster-Client-IP', // Rackspace LB, Riverbed Stingray
+    'X-Real-IP',           
+    'X-Cluster-Client-IP', 
     'Proxy-Client-IP',
-    'CF-Connecting-IP',    // Cloudflare
-    'Fastly-Client-Ip',    // Fastly CDN and Firebase hosting header when forwared to a cloud function
-    'True-Client-Ip',      // Akamai and Cloudflare
+    'CF-Connecting-IP',   
+    'Fastly-Client-Ip',    
+    'True-Client-Ip',      
     'WL-Proxy-Client-IP',
     'HTTP_X_FORWARDED_FOR',
     'HTTP_X_FORWARDED',
@@ -19,8 +18,6 @@ const IP_HEADERS = [
     'HTTP_FORWARDED',
     'HTTP_VIA',
     'REMOTE_ADDR'
-
-    // you can add more matching headers here ...
 ];
 
 const getIpAdress = request => {
