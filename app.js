@@ -22,6 +22,8 @@ import logout from "./routes/logout.js";
 import update from "./routes/update.js";
 import new_post from "./routes/new_post.js";
 import post from "./routes/post.js";
+import add from "./routes/add.js";
+import addr from "./routes/addr.js";
 
 app.use(express.static('./public'));
 
@@ -34,6 +36,8 @@ app.use("/logout", logout);
 app.use("/update", update);
 app.use("/new_post", new_post);
 app.use("/post/",post);
+app.use("/add/",add);
+app.use("/addr/",addr);
 
 const PORT = 3000;
 
