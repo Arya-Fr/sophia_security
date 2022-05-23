@@ -34,6 +34,7 @@ router.post('/', async (req, res) => {
         session.errorType = 1;
         switch(session.errorMessage){
             case 'Firebase: Error (auth/email-already-in-use).':session.errorMessage = 'Email déjà utiliser';break;
+            case 'Firebase: Password should be at least 6 characters (auth/weak-password).':session.errorMessage = 'Mot de passe trop faible (nécessite au moins 6 caractères)';break;
         }
         req.session.save();
         res.redirect("/");
